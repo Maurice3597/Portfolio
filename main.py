@@ -16,3 +16,20 @@ with col2:
 info = """Below are some apps I have build with python
 Feel free to contact me for further enquiries"""
 st.write(info)
+
+col3, col4 = st.columns(2)
+data = pandas.read_csv('data.csv', sep=';')
+
+with col3:
+    for index, row in data[:10].iterrows():
+        st.header(row["title"])
+        st.write(row['description'])
+        st.image(f"images/{row['image']}")
+        st.write(f"[Source Link]({row['url']})")
+
+with col4:
+    for index, row in data[11:].iterrows():
+        st.header(row["title"])
+        st.write(row['description'])
+        st.image(f"images/{row['image']}")
+        st.write(f"[Source Link]({row['url']})")
