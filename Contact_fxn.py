@@ -1,7 +1,7 @@
 import smtplib, ssl
 import pandas
-def send_mail(message, user_email):
-    username = user_email
+def send_mail(message):
+    username = "datascienceandaienegneer@gmail.com"
     password = 'ecri eafn hsxa wgqy'
 
     host = 'smtp.gmail.com'
