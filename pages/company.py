@@ -17,18 +17,27 @@ tech landscape. Together, we are empowering businesses to thrive in the digital 
 st.info(info)
 st.subheader("Our Team")
 
-col1, empty_col1, col2, empty_col2, col3 = st.columns([1.2, 0.3, 1.2, 0.3, 1.2])
+col1, empty_col1, col2, empty_col2, col3 = st.columns([1.2, 0.2, 1.2, 0.2, 1.2])
 
-data = pandas.read_csv('pages/datas.csv', sep=',')
-#topic = pandas.read_csv('topics.csv')
+data = pandas.read_csv('pages/Data.csv', sep=',')
+
 with col1:
-    for index, row in data[:4].iterrows():
-        st.subheader(f"{row['firstname']} {row['lastname']}")
+    for index, row in data[:3].iterrows():
+        st.subheader(f"{row['First_name']} {row['Last_name']}")
+        st.write(row['Role'])
+        st.image(f"pages/photo/{row['Image']}")
 
 with col2:
-    for index, row in data[4:8].iterrows():
-        st.subheader(f"{row['firstname']} {row['lastname']}")
+    for index, row in data[3:6].iterrows():
+        st.subheader(f"{row['First_name']} {row['Last_name']}")
+        st.write(row['Role'])
+        st.image(f"pages/photo/{row['Image']}")
+        st.write(3*"\n")
+
 
 with col3:
-    for index, row in data[8:].iterrows():
-        st.subheader(f"{row['firstname']} {row['lastname']}")
+    for index, row in data[6:].iterrows():
+        st.subheader(f"{row['First_name']} {row['Last_name']}")
+        st.write(row['Role'])
+        st.image(f"pages/photo/{row['Image']}")
+
