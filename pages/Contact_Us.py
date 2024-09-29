@@ -19,4 +19,4 @@ if button:
     message = message# + user_email
     send_mail(message)
 
-st.write("OR \nCall us on phone via\t+237(0)7017427977")
+st.write("OR \nCall us on phone via\t+237 (0)7017427977")
